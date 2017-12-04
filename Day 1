@@ -1,0 +1,36 @@
+const _ = require('lodash');
+const numberList = [1,1,2,2,3,4,1]
+
+//Get the last digit of the array and compare it to the first
+const compareFinalNumber = (numberArray)=>{
+		if (_.last(numberArray) == numberArray[0]){
+			return (_.last(numberArray));
+		} else {
+			return;
+	}
+};
+
+//Review a sequence of digits and retain any digit that matches the next number
+const keepDuplicateNumbers = (numberArray)=>{
+	const isRepeated = (number, index)=>{
+		if (numberArray[index] == numberArray[index+1]){
+			return true;
+		} else {
+			return false;
+		}
+	};
+	return _.filter(numberList, isRepeated);
+};
+
+//Combine the repeated numbers and last number check to make one array
+const combineRepeatedNumbers = (numberArray)=>{
+	const getDuplicates = keepDuplicateNumbers(numberArray);
+	const checkFinal = compareFinalNumber(numberArray);
+	return _.concat(getDuplicates,checkFinal);
+};
+
+//Sum the digits in the repeated numbers array 
+const sumRepeated = (repeatedArray)=>{
+	const finalSum = _.sum(combineRepeatedNumbers(repeatedArray));
+		return finalSum;
+};
