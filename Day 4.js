@@ -543,6 +543,6 @@ const saveValidPasscodes = (stringArray)=>{
 //Count how many passcodes are valid
 const countValidPasscodes = (trueArray)=>{
 	return saveValidPasscodes(trueArray).length;
-}
+};
 
 console.log(countValidPasscodes(processInput(input)));
