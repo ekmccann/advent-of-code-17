@@ -15,5 +15,3 @@ const jumpSpaces = (numberArray, countMoves=0, index=0)=>{
 	};
 	return countMoves;
 };
-
-console.log(jumpSpaces(processInput(aocInput)));
