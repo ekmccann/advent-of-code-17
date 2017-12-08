@@ -31,7 +31,6 @@ const combineRepeatedNumbers = (numberArray)=>{
 };
 
 //Sum the digits in the repeated numbers array 
-const sumRepeated = (repeatedArray)=>{
-	const finalSum = _.sum(combineRepeatedNumbers(repeatedArray));
-		return finalSum;
+const sumRepeated = (repeatedArray)=>{ 
+	return _.sum(combineRepeatedNumbers(repeatedArray));;
 };
