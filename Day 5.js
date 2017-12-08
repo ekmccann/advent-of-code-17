@@ -1,4 +1,4 @@
-const input = require('./aoc-day-5.js');
+const input = require('./day-5-input.js');
 
 //Process the input into a single array
 const processInput = (input)=>{
